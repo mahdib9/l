@@ -4,7 +4,7 @@ package.cpath = package.cpath .. ';.luarocks/lib/lua/5.2/?.so'
 
 require("./bot/utils")
 
-VERSION = '2'
+VERSION = '4.1'
 
 -- This function is called when tg receive a msg
 function on_msg_receive (msg)
@@ -208,48 +208,56 @@ function create_config( )
   -- A simple config with basic plugins and ourselves as privileged user
   config = {
     enabled_plugins = {
-    "onservice",
-    "inrealm",
-    "ingroup",
-    "inpm",
-    "banhammer",
-    "stats",
-    "anti_spam",
-    "owners",
-    "arabic_lock",
-    "set",
-    "get",
-    "broadcast",
-    "download_media",
-    "invite",
-    "all",
-    "leave_ban",
-    "admin"
+"addsudo",
+"admin",
+"all",
+"anti_spam",
+"banhammer",
+"broadcast",
+"calc",
+"code_chats",
+"dl",
+"download_media",
+"expire",
+"feedback",
+"forward",
+"get",
+"id",
+"image_maker",
+"in_kie",
+"ingroup",
+"inpm",
+"inrealm",
+"invite",
+"invite_reply",
+"leave_ban",
+"lock_badw",
+"lock_chat",
+"lock_eng",
+"lock_join",
+"lock_link",
+"lock_tag",
+"onservise",
+"plugins",
+"salam_rank",
+"say",
+"send_sticker",
+"set",
+"setrank",
+"spam1",
+"spam2",
+"stats",
+"tagall",
+"text",
+"time",
+"up",
+"webshot",
+"welcome_rank",
     },
-    sudo_users = {110626080,103649648,143723991,111020322,0,tonumber(our_id)},--Sudo users
+    sudo_users = {117625029,184413821},--Sudo users
     disabled_channels = {},
     moderation = {data = 'data/moderation.json'},
-    about_text = [[Teleseed v2 - Open Source
-An advance Administration bot based on yagop/telegram-bot 
-
-https://github.com/SEEDTEAM/TeleSeed
-
-Admins
-@iwals [Founder]
-@imandaneshi [Developer]
-@Rondoozle [Developer]
-@seyedan25 [Manager]
-
-Special thanks to
-awkward_potato
-Siyanew
-topkecleon
-Vamptacus
-
-Our channels
-@teleseedch [English]
-@iranseed [persian]
-]],
+    about_text = [[ ]],
     help_text_realm = [[
 Realm Commands:
 
