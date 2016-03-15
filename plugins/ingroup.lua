@@ -240,7 +240,7 @@ local function show_group_settingsmod(msg, data, target)
    	end
    	
   local settings = data[tostring(target)]['settings']
-  local text = "تنظیمات گروه:\n\nقفل نام گروه: "..settings.lock_name.."\n============================\nقفل عکس گروه: "..settings.lock_photo.."\n============================\nقفل عضوگیری گروه : "..settings.lock_member.."\n============================\nمسدودسازی کاربران خارج شده: "..leave_ban.."\n============================\nقفل زبان فارسی : "..settings.lock_arabic.."\n============================\nقفل زبان انگلیسی: "..settings.lock_english.."\n============================\nقفل چت در گروه : "..settings.lock_chat.."\n============================\nقفل ورود با لینک : "..settings.lock_join.."\n============================\nقفل تگ متن  : "..settings.antitag.."\n============================\nقفل لینک: "..settings.lock_ads.."\n============================\nقفل الفاظ رکیک: "..settings.antifosh.."\n============================\nمقدار حساسیت اسپم: "..NUM_MSG_MAX.."\n============================\nمحافظ ربات : "..bots_protection.."\n============================\n\nنسخه ربات:3.0\n@HEXTOR team"
+  local text = "تنظیمات گروه:\n\nقفل نام گروه: "..settings.lock_name.."\n============================\nقفل عکس گروه: "..settings.lock_photo.."\n============================\nقفل عضوگیری گروه : "..settings.lock_member.."\n============================\nمسدودسازی کاربران خارج شده: "..leave_ban.."\n============================\nقفل زبان فارسی : "..settings.lock_arabic.."\n============================\nقفل زبان انگلیسی: "..settings.lock_english.."\n============================\nقفل چت در گروه : "..settings.lock_chat.."\n============================\nقفل ورود با لینک : "..settings.lock_join.."\n============================\nقفل تگ متن  : "..settings.antitag.."\n============================\nقفل لینک: "..settings.lock_ads.."\n============================\nقفل الفاظ رکیک: "..settings.antifosh.."\n============================\nمقدار حساسیت اسپم: "..NUM_MSG_MAX.."\n============================\nمحافظ ربات : "..bots_protection.."\n============================\n\nنسخه ربات:3.0\n@mahdib9"
   return text
 end
 
@@ -517,7 +517,7 @@ local function unlock_group_namemod(msg, data, target)
 end
 local function lock_group_floodmod(msg, data, target)
   if not is_owner(msg) then
-    return "صاحب این گروه یافت نشد\nبه چنل مراجعه کرده و با ورود به گروه ساپورت  صاحب گروه را مشخص کید\n\nآیدی چنل:\n@HEXTOR_CH"
+    return "صاحب این گروه یافت نشد\nبه چنل مراجعه کرده و با ورود به گروه ساپورت  صاحب گروه را مشخص کید\n\nآیدی چنل:\n@mahdib9"
   end
   local group_flood_lock = data[tostring(target)]['settings']['flood']
   if group_flood_lock == 'yes' then
@@ -531,7 +531,7 @@ end
 
 local function unlock_group_floodmod(msg, data, target)
   if not is_owner(msg) then
-    return "صاحب این گروه یافت نشد\nبه چنل مراجعه کرده و با ورود به گروه ساپورت  صاحب گروه را مشخص کید\n\nآیدی چنل:\n@HEXTOR_CH"
+    return "صاحب این گروه یافت نشد\nبه چنل مراجعه کرده و با ورود به گروه ساپورت  صاحب گروه را مشخص کید\n\nآیدی چنل:\n@mahdib9"
   end
   local group_flood_lock = data[tostring(target)]['settings']['flood']
   if group_flood_lock == 'no' then
@@ -654,7 +654,7 @@ end
 local function modadd(msg)
   -- superuser and admins only (because sudo are always has privilege)
   if not is_admin(msg) then
-    return "شما دسترسی افزودن گروه به سرور را ندارید\nصاحبان ربات:\n@minaco \n @minaco1 "
+    return "شما دسترسی افزودن گروه به سرور را ندارید\nصاحبان ربات:\n@mahdib9  \n @mahdib6 "
   end
   local data = load_data(_config.moderation.data)
   if is_group(msg) then
@@ -666,7 +666,7 @@ end
 local function realmadd(msg)
   -- superuser and admins only (because sudo are always has privilege)
   if not is_admin(msg) then
-    return "شما دسترسی افزودن گروه مدیریت به سرور را ندارید\nصاحبان ربات:\n@minaco \n @minaco1 "
+    return "شما دسترسی افزودن گروه مدیریت به سرور را ندارید\nصاحبان ربات:\n@mahdib9 \n @mahdib6 "
   end
   local data = load_data(_config.moderation.data)
   if is_realm(msg) then
@@ -679,11 +679,11 @@ end
 function modrem(msg)
   -- superuser and admins only (because sudo are always has privilege)
   if not is_admin(msg) then
-    return "شما دسترسی پاک کردن گروه از سرور را ندارید\nصاحبان ربات:\n@minaco \n @minaco1 "
+    return "شما دسترسی پاک کردن گروه از سرور را ندارید\nصاحبان ربات:\n@mahdib9 \n @mahdib9 "
   end
   local data = load_data(_config.moderation.data)
   if not is_group(msg) then
-    return 'این گروه در سرور افزوده نشده\nبه چنل مراجعه کنید\n @HEXTOR_CH'
+    return 'این گروه در سرور افزوده نشده\nبه چنل مراجعه کنید\n @mahdib9'
   end
     receiver = get_receiver(msg)
     chat_info(receiver, check_member_modrem,{receiver=receiver, data=data, msg = msg})
@@ -735,7 +735,7 @@ local function promote(receiver, member_username, member_id)
   local data = load_data(_config.moderation.data)
   local group = string.gsub(receiver, 'chat#id', '')
   if not data[group] then
-    return send_large_msg(receiver, 'این گروه در سرور افزوده نشده است\nبه چنل مراجعه کنید\n @HXTOR_CH')
+    return send_large_msg(receiver, 'این گروه در سرور افزوده نشده است\nبه چنل مراجعه کنید\n @mahdib9')
   end
   if data[group]['moderators'][tostring(member_id)] then
     return send_large_msg(receiver, member_username..' در حال حاضر مدیرگروه است')
@@ -763,7 +763,7 @@ local function demote(receiver, member_username, member_id)
   local data = load_data(_config.moderation.data)
   local group = string.gsub(receiver, 'chat#id', '')
   if not data[group] then
-    return send_large_msg(receiver, 'گروه به سرور افزوده نشده است\nبه چنل مراجعه کنید\n @HEXTOR_CH')
+    return send_large_msg(receiver, 'گروه به سرور افزوده نشده است\nبه چنل مراجعه کنید\n @mahdib9')
   end
   if not data[group]['moderators'][tostring(member_id)] then
     return send_large_msg(receiver, member_username..' مدیرگروه نیست')
@@ -818,7 +818,7 @@ local function modlist(msg)
   local data = load_data(_config.moderation.data)
   local groups = "groups"
   if not data[tostring(groups)][tostring(msg.to.id)] then
-    return 'گروه افزوده نشده است\n به چنل مراجعه کنید\n @HEXTOR_CH'
+    return 'گروه افزوده نشده است\n به چنل مراجعه کنید\n @mahdib9'
   end
   -- determine if table is empty
   if next(data[tostring(msg.to.id)]['moderators']) == nil then --fix way
@@ -1360,7 +1360,7 @@ end
     if matches[1] == 'owner' then
       local group_owner = data[tostring(msg.to.id)]['set_owner']
       if not group_owner then 
-        return "صاحب گروه مشخص نیست\nبا مراجعه به چنل و ورود به گروه پشتیبانی صاحب گروه را انتخاب کنید\nلینک چنل\n @HEXTOR_CH"
+        return "صاحب گروه مشخص نیست\nبا مراجعه به چنل و ورود به گروه پشتیبانی صاحب گروه را انتخاب کنید\nلینک چنل\n @mahdib9"
       end
       savelog(msg.to.id, name_log.." ["..msg.from.id.."] used /owner")
       return "هم اکنون ساحب گروه ["..group_owner..'] است'
